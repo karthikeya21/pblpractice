@@ -1,0 +1,11 @@
+D:\repos\MongoRepository\bin\Debug\net8.0\MongoRepository.deps.json
+D:\repos\MongoRepository\bin\Debug\net8.0\MongoRepository.dll
+D:\repos\MongoRepository\bin\Debug\net8.0\MongoRepository.pdb
+D:\repos\MongoRepository\obj\Debug\net8.0\MongoRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\repos\MongoRepository\obj\Debug\net8.0\MongoRepository.AssemblyInfoInputs.cache
+D:\repos\MongoRepository\obj\Debug\net8.0\MongoRepository.AssemblyInfo.cs
+D:\repos\MongoRepository\obj\Debug\net8.0\MongoRepository.csproj.CoreCompileInputs.cache
+D:\repos\MongoRepository\obj\Debug\net8.0\MongoRepository.dll
+D:\repos\MongoRepository\obj\Debug\net8.0\refint\MongoRepository.dll
+D:\repos\MongoRepository\obj\Debug\net8.0\MongoRepository.pdb
+D:\repos\MongoRepository\obj\Debug\net8.0\ref\MongoRepository.dll
