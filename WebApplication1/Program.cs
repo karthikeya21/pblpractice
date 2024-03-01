@@ -1,6 +1,7 @@
 using Microsoft.Data.SqlClient;
 using Repository;
 using SQLrepository;
+using System.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +15,23 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddScoped<IStudentRepository,StudentRepository>();
-builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
+builder.Services.AddScoped<IDataRepository, DataRepository>();
+//builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
 // Add other services as needed
+
+var configuration = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddEnvironmentVariables()
+    .Build();
+
+string connectionString = configuration.GetConnectionString("SqlConnection");
+
+builder.Services.AddScoped<IDbConnection>(provider =>
+{
+    var connection = new SqlConnection(connectionString);
+    return connection;
+});
+
 
 
 var app = builder.Build();

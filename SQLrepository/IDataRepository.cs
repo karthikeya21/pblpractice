@@ -11,6 +11,11 @@ namespace SQLrepository
     {
         
        public string[] GetData();
+        
+        public Task<List<Student>> GetAll();
+        public Task Insert(Student student);
+        public Task Update(Student student);
+        public Task Delete(int id);
 
     }
 }

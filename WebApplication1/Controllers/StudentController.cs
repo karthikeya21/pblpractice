@@ -10,12 +10,42 @@ namespace WebApplication1.Controllers
     {
         //---using dependency injection ---
         private readonly IStudentRepository _studentRepository ;
-        private readonly ITeacherRepository _teacherRepository;
-        public StudentController(IStudentRepository studentrep, ITeacherRepository teacherRepository)
+        //private readonly ITeacherRepository _teacherRepository;
+        public StudentController(IStudentRepository studentrep)
         {
             _studentRepository = studentrep;
-            _teacherRepository = teacherRepository;
+            //_teacherRepository = teacherRepository;
         }
+
+        [HttpGet]
+        [Route("GetAllStudents")]
+        public async Task<ActionResult<List<Student>>> Get()
+        {
+            return await _studentRepository.GetStudents();
+        }
+        [HttpPost]
+        [Route("AddStudent")]
+        public async Task AddStudent(Student student)
+        {
+             await _studentRepository.AddStudent(student);
+        }
+        [HttpPut]
+        [Route("UpdateStudent")]
+        public async Task UpdateStudent(Student student)
+        {
+            await _studentRepository.UpdateStudent(student);
+        }
+        [HttpDelete]
+        [Route("DeleteStudent")]
+        public async Task DeleteStudent(int id)
+        {
+            await _studentRepository.DeleteStudent(id);
+        }
+
+
+
+
+
 
         /* --- using constructor for class---
           private readonly StudentRepository _studentRepository;
@@ -26,6 +56,7 @@ namespace WebApplication1.Controllers
         }
         */
 
+        /*
         [HttpGet]
         [Route("GetData")]
         public ActionResult GetAllStudent()
@@ -34,7 +65,7 @@ namespace WebApplication1.Controllers
             return Ok(students);
         }
 
-        [HttpGet("GetByID")]
+        /*[HttpGet("GetByID")]
         public ActionResult GetById(int id)
         {
             var studentName = _studentRepository.GetById(id);
@@ -44,6 +75,7 @@ namespace WebApplication1.Controllers
             }
             return Ok(studentName);
         }
+        
 
         [HttpGet("GetByName")]
         public ActionResult GetByName(string name)
@@ -93,6 +125,7 @@ namespace WebApplication1.Controllers
             }
             return Ok(result);
         }
+        */
 
 
     }

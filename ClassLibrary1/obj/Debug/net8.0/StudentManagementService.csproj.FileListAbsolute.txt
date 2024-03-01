@@ -17,3 +17,4 @@ D:\repos\ClassLibrary1\bin\Debug\net8.0\MongoRepository.dll
 D:\repos\ClassLibrary1\bin\Debug\net8.0\MongoRepository.pdb
 D:\repos\ClassLibrary1\bin\Debug\net8.0\Common.dll
 D:\repos\ClassLibrary1\bin\Debug\net8.0\Common.pdb
+D:\repos\ClassLibrary1\obj\Debug\net8.0\StudentManagementService.sourcelink.json

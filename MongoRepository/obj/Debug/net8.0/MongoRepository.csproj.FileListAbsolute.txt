@@ -9,3 +9,4 @@ D:\repos\MongoRepository\obj\Debug\net8.0\MongoRepository.dll
 D:\repos\MongoRepository\obj\Debug\net8.0\refint\MongoRepository.dll
 D:\repos\MongoRepository\obj\Debug\net8.0\MongoRepository.pdb
 D:\repos\MongoRepository\obj\Debug\net8.0\ref\MongoRepository.dll
+D:\repos\MongoRepository\obj\Debug\net8.0\MongoRepository.sourcelink.json

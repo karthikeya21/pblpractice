@@ -13,3 +13,4 @@ D:\repos\SQLrepository\bin\Debug\net8.0\Common.dll
 D:\repos\SQLrepository\bin\Debug\net8.0\Common.pdb
 D:\repos\SQLrepository\obj\Debug\net8.0\SQLrepository.csproj.AssemblyReference.cache
 D:\repos\SQLrepository\obj\Debug\net8.0\SQLrepository.csproj.CopyComplete
+D:\repos\SQLrepository\obj\Debug\net8.0\SQLrepository.sourcelink.json

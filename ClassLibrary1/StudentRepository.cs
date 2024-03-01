@@ -7,7 +7,31 @@ namespace Repository
     public class StudentRepository : IStudentRepository
     {
 
-        private readonly DataRepository data;
+        private readonly IDataRepository ir;
+        public StudentRepository(IDataRepository idata)
+        {
+            ir = idata;
+        }
+        public async Task<List<Student>> GetStudents()
+        {
+            return await ir.GetAll();
+        }
+        public async Task AddStudent(Student student)
+        {
+             await ir.Insert(student);
+        }
+        public async Task UpdateStudent(Student student)
+        {
+            await ir.Update(student);
+        }
+        public async Task DeleteStudent(int id)
+        {
+            await ir.Delete(id);
+        }
+
+
+
+        /*private readonly DataRepository data;
        
         public StudentRepository() { 
             data = new DataRepository( );
@@ -59,6 +83,7 @@ namespace Repository
             return students;
 
         }
+        */
     }
 
 }
